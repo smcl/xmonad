@@ -16,10 +16,10 @@ Then configure X11 to load xmonad when it starts - different for each distro/gre
 
 When XMonad loads it'll just be a blank screen with a mouse pointer - clicking all over the place won't do anything. You'll eventually figure out a setup that's comfortable for you, but here's a set of steps that'll create two workspaces - one running `firefox` and the other with two `xterm`s side-by-side.
 
-# <kbd>Windows</kbd>+<kbd>Shift</kbd>+<kbd>Enter</kbd> (creates xterm 1)
-# <kbd>Windows</kbd>+<kbd>Shift</kbd>+<kbd>Enter</kbd> (creates xterm 2)
-# <kbd>Windows</kbd>+<kbd>2</kbd> (create and switch to a new workspace)
-# <kbd>Windows</kbd>+<kbd>p</kbd>, `firefox`, <kbd>Enter</kbd> (launch firefox using dmenu)
+1. <kbd>Windows</kbd>+<kbd>Shift</kbd>+<kbd>Enter</kbd> (creates xterm 1)
+2. <kbd>Windows</kbd>+<kbd>Shift</kbd>+<kbd>Enter</kbd> (creates xterm 2)
+3. <kbd>Windows</kbd>+<kbd>2</kbd> (create and switch to a new workspace)
+4. <kbd>Windows</kbd>+<kbd>p</kbd>, `firefox`, <kbd>Enter</kbd> (launch firefox using dmenu)
 
 # todo
 
