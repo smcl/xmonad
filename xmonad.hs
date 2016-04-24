@@ -19,7 +19,7 @@ import XMonad.Actions.Volume(toggleMute, lowerVolume, raiseVolume)
 -- TODO: hook in TopicSpaces, start specific apps on specific workspaces
  
 main = do
-  xmproc <- spawnPipe "/usr/bin/xmobar /home/sean/.xmonad/xmobarrc"
+  xmproc <- spawnPipe "/usr/bin/xmobar ~/.xmonad/xmobarrc"
   xmonad $ defaultConfig {
     modMask = mod4Mask, 
     terminal = "xterm",
@@ -42,7 +42,8 @@ main = do
                           ppTitle = xmobarColor "white" "" . shorten 50
                         }
   } `additionalKeys` [((0, xF86XK_AudioMute), toggleMute >> return ())
-                     , ((0, xF86XK_AudioLowerVolume), lowerVolume 3 >> return ())
-                     , ((0, xF86XK_AudioRaiseVolume), raiseVolume 3 >> return ())
+                     , ((0, xF86XK_AudioLowerVolume), lowerVolume 5 >> return ())
+                     , ((0, xF86XK_AudioRaiseVolume), raiseVolume 5 >> return ())
+                     , ((0, xF86XK_MonBrightnessUp), spawn "xbacklight +20")
+                     , ((0, xF86XK_MonBrightnessDown), spawn "xbacklight -20")
                      ]
-    
