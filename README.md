@@ -21,6 +21,13 @@ When XMonad loads it'll just be a blank screen with a mouse pointer - clicking a
 3. <kbd>Windows</kbd>+<kbd>2</kbd> (create and switch to a new workspace)
 4. <kbd>Windows</kbd>+<kbd>p</kbd>, `firefox`, <kbd>Enter</kbd> (launch firefox using dmenu)
 
+XMonad is a little tricky to get used to - here's a little graphic to help. In this case "mod" is mapped to the Windows key, so when you see "mod" think "windows" :)
+
+![alt text](https://wiki.haskell.org/wikiupload/b/b8/Xmbindings.png "xmonad cheat sheet")
+
+
+
+
 # todo
 
 There are a handful of things still sorta-wrong:
