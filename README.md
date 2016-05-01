@@ -32,6 +32,4 @@ XMonad is a little tricky to get used to - here's a little graphic to help. In t
 There are a handful of things still sorta-wrong:
 
 * hard-coded weather (xmobar)
-* hard-coded network interface (xmobar)
-* hard-coded user directory when loading xmobarrc - think I can either use "~/.xmonad/xmonadrc" or roll it into the main xmonad.hs somehow
 * assumes presence of Adobe's "Source Code Pro" font - wonder if there's a way to fall back (or I should just use a standard monospaced font)
