@@ -23,7 +23,7 @@ Config {
       
       Run Memory [ "-t", "<used> MB" ] 10,
       Run Date "%a %b %d %Y %l:%M" "date" 10,
-      Run Weather "LKTB" [ "-t",       "<tempC>C"
+      Run Weather "LKTB" [ "-t",       "<station> <tempC>C"
                          , "-L",       "10"
                          , "-H",       "20"
                          , "--normal", "green"
@@ -32,9 +32,10 @@ Config {
 
       Run Com "uname" ["--nodename"] "" 36000,
       Run Com "whoami" [] "" 36000,
+      Run Com "/bin/bash" [ "/home/sean/.xmonad/xmobar-volume.sh" ] "vol" 10,
       Run StdinReader 
-        ]
+      ]
   , sepChar = "%"
   , alignSep = "}{"
-  , template = "%StdinReader% }{ %dynnetwork% | %battery% | %multicpu% | %memory% | <fc=#ee9a00>%date%</fc> | %LKTB% | %whoami%@%uname% <action=`import -window root screenshot.jpg`><fn=1></fn></action> "
+  , template = "%StdinReader% }{ %dynnetwork% | %battery% | %multicpu% | %memory% | <fn=1></fn> %vol% | <fc=#ee9a00>%date%</fc> | %LKTB% | %whoami%@%uname% <action=`import -window root screenshot.jpg`><fn=1></fn></action> "
   }
