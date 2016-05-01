@@ -29,9 +29,12 @@ Config {
                          , "--normal", "green"
                          , "--high",   "red"
                          , "--low",    "lightblue"] 18000,
-      Run StdinReader
+
+      Run Com "uname" ["--nodename"] "" 36000,
+      Run Com "whoami" [] "" 36000,
+      Run StdinReader 
         ]
   , sepChar = "%"
   , alignSep = "}{"
-  , template = "%StdinReader% }{ %dynnetwork% | %battery% | %multicpu% | %memory% | <fc=#ee9a00>%date%</fc> | %LKTB%"
+  , template = "%StdinReader% }{ %dynnetwork% | %battery% | %multicpu% | %memory% | <fc=#ee9a00>%date%</fc> | %LKTB% | %whoami%@%uname% <action=`import -window root screenshot.jpg`><fn=1></fn></action> "
   }
